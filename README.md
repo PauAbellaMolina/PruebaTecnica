@@ -1,2 +1,2 @@
-# Backend Prueba Tecnica
+# Proyecto Prueba Tecnica
 Prueba Técnica como Padawan en Studiogenesis
