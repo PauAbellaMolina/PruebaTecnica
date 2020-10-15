@@ -1,0 +1,64 @@
+/* GENERAL */
+.idCol {
+    min-width: 70px;
+}
+
+.fechaCol {
+    min-width: 180px;
+}
+
+/* USUARIOS */
+#usuarios p {
+    text-align: center;
+    margin: 0;
+}
+    #usuarios .short {
+        min-width: 1vw;
+        margin: 0 1em 0 1em;
+    }
+    #usuarios .medium {
+        min-width: 5vw;
+        margin: 0 1em 0 1em;
+    }
+    #usuarios .large {
+        min-width: 10vw;
+        margin: 0 1em 0 1em;
+    }
+    #usuarios .larger {
+        min-width: 15vw;
+        margin: 0 1em 0 1em;
+    }
+
+#usuarios #usuariosCards span {
+    border-right: 1px solid grey;
+}
+
+.test {
+    border: 1px solid red;
+}
+
+/* PRODUCTOS y CATEGORIAS */
+#productos p {
+    text-align: center;
+    margin: 0;
+}
+    #productos .short {
+        width: 50px;
+        margin: 0 1em 0 1em;
+    }
+    #productos .medium {
+        width: 100px;
+        margin: 0 1em 0 1em;
+    }
+    #productos .large {
+        min-width: 150px;
+        margin: 0 1em 0 1em;
+    }
+    #productos .larger {
+        min-width: 310px;
+        margin: 0 1em 0 1em;
+    }
+
+#productos #productosCards span {
+    border-right: 1px solid grey;
+}
