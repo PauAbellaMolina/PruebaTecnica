@@ -84,6 +84,9 @@ Route::group(['middleware' => 'auth:api'], function() {
     //CRUD TARIFAS
     //Gets all, por id, por id de producto y por id de producto y que esten activas, hayan pasado o aun no se hayan activado, es decir, futuras
     Route::get('get-tarifas', 'Api\TarifasController@getTarifas');
+    Route::get('get-tarifas/activas', 'Api\TarifasController@getTarifasActivas');
+    Route::get('get-tarifas/pasadas', 'Api\TarifasController@getTarifasPasadas');
+    Route::get('get-tarifas/futuras', 'Api\TarifasController@getTarifasFuturas');
     Route::get('get-tarifas/{id}', 'Api\TarifasController@getTarifasId');
     Route::get('get-tarifas/prod/{id_prod}', 'Api\TarifasController@getTarifasProductId');
     Route::get('get-tarifas/prod/{id_prod}/activas', 'Api\TarifasController@getTarifasProductIdActivas');

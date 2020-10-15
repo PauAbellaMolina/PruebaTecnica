@@ -19,6 +19,33 @@ class TarifasController extends Controller
             return response()->json(['status' => 0, 'tarifas' => []], 500);
         }
     }
+    //Get all active tarifas
+    public function getTarifasActivas() {
+        try{
+            $tarifas = Tarifa::where('fecha_inicio', '<', date('Y-m-d H:m:s'))->where('fecha_fin', '>', date('Y-m-d H:m:s'))->get();
+            return response()->json(['status' => 1, 'active tarifas' => $tarifas]);
+        } catch(\Exception $e) {
+            return response()->json(['status' => 0, 'active tarifas' => []], 500);
+        }
+    }
+    //Get all past tarifas
+    public function getTarifasPasadas() {
+        try{
+            $tarifas = Tarifa::where('fecha_fin', '<', date('Y-m-d H:m:s'))->get();
+            return response()->json(['status' => 1, 'past tarifas' => $tarifas]);
+        } catch(\Exception $e) {
+            return response()->json(['status' => 0, 'past tarifas' => []], 500);
+        }
+    }
+    //Get all future tarifas
+    public function getTarifasFuturas() {
+        try{
+            $tarifas = Tarifa::where('fecha_inicio', '>', date('Y-m-d H:m:s'))->get();
+            return response()->json(['status' => 1, 'future tarifas' => $tarifas]);
+        } catch(\Exception $e) {
+            return response()->json(['status' => 0, 'future tarifas' => []], 500);
+        }
+    }
     //Get tarifas by id
     public function getTarifasId($id) {
         try{
