@@ -12,8 +12,12 @@
             <p class="col-md-2">{{product.url_foto}}</p>
             <span></span>
             <div class="w-100 d-flex justify-content-between">
-                <p class="ml-4">E</p>
-                <p class="mr-3">B</p>
+                <p class="ml-4"><a :href="'/productos/edit/'+product.id">E</a></p>
+                -
+                <p class="mr-3"><a :href="'/productos/delete/'+product.id">B</a></p>
+                <a :href="'/categorias/filter/prod/'+product.id">Categs</a>
+                -
+                <a :href="'/tarifas/filter/prod/'+product.id">Tarifas</a>
             </div>
         </div>
     </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 use Str;
 
@@ -29,6 +30,24 @@ class UsersController extends Controller
             return response()->json(['status' => 0, 'users' => []], 500);
         }
     }
+    //Get user by nombre
+    public function getUserNombre($nombre) {
+        try{
+            $users = User::where('nombre', '=', $nombre)->get();
+            return response()->json(['status' => 1, 'users' => $users]);
+        } catch(\Exception $e) {
+            return response()->json(['status' => 0, 'users' => []], 500);
+        }
+    }
+    //Get user by email
+    public function getUserEmail($email) {
+        try{
+            $users = User::where('email', '=', $email)->get();
+            return response()->json(['status' => 1, 'users' => $users]);
+        } catch(\Exception $e) {
+            return response()->json(['status' => 0, 'users' => []], 500);
+        }
+    }
 
     //New user
     public function newUser(Request $request) {
@@ -38,7 +57,7 @@ class UsersController extends Controller
             $user->apellidos = $request->apellidos;
             $user->fecha_nacimiento = $request->fecha_nacimiento;
             $user->email = $request->email;
-            $user->password = $request->password;
+            $user->password = Hash::make($request->password);
             $user->url_foto = $request->url_foto;
             $user->api_token = Str::random(60);
             $user->created_at = date('Y-m-d H:m:s');

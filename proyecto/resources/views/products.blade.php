@@ -7,7 +7,32 @@
             <h1><strong>Productos</strong></h1>
             <hr/>
             <div class="container">
-                <div class="row justify-content-center">
+                <div class="d-flex justify-content-between align-items-end">
+                    <div>
+                        <h3>Filtrar:</h3>
+                        <form method="POST" action="{{route('productos/id')}}">
+                            {{ csrf_field() }}
+                            <input type="text" name="id" value="" required placeholder="ID de producto" />
+                            <input type="submit" value="Filtrar"/>
+                        </form>
+                        <div class="mt-1"></div>
+                        <form method="POST" action="{{route('productos/codigo')}}">
+                            {{ csrf_field() }}
+                            <input type="text" name="codigo" value="" required placeholder="Código de producto" />
+                            <input type="submit" value="Filtrar"/>
+                        </form>
+                        <div class="mt-1"></div>
+                        <form method="POST" action="{{route('productos/nombre')}}">
+                            {{ csrf_field() }}
+                            <input type="text" name="nombre" value="" required placeholder="Nombre de producto" />
+                            <input type="submit" value="Filtrar"/>
+                        </form>
+                    </div>
+                    <div>
+                        <h1><a href="{{route('productos/nuevo')}}">+</a></h1>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-3">
                     <div class="col-md-12">
                         <div class="card-header d-flex flex-row font-weight-bolder">
                             <p class="idCol col-auto">ID</p>

@@ -1927,6 +1927,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     categoria: String
@@ -1980,6 +1981,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
 //
 //
 //
@@ -38353,23 +38358,44 @@ var render = function() {
         _vm._v(" "),
         _c("span"),
         _vm._v(" "),
-        _vm._m(0)
+        _c("div", { staticClass: "w-100 d-flex justify-content-between" }, [
+          _c("p", { staticClass: "ml-4" }, [
+            _c(
+              "a",
+              { attrs: { href: "/categorias/edit/" + _vm.categoria.id } },
+              [_vm._v("E")]
+            )
+          ]),
+          _vm._v(" "),
+          _vm.categoria.id_prod > 0
+            ? _c("p", { staticClass: "mr-3" }, [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href:
+                        "/categorias/delete/" +
+                        _vm.categoria.id +
+                        "/" +
+                        _vm.categoria.id_prod
+                    }
+                  },
+                  [_vm._v("B")]
+                )
+              ])
+            : _c("p", { staticClass: "mr-3" }, [
+                _c(
+                  "a",
+                  { attrs: { href: "/categorias/delete/" + _vm.categoria.id } },
+                  [_vm._v("B")]
+                )
+              ])
+        ])
       ]
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-100 d-flex justify-content-between" }, [
-      _c("p", { staticClass: "ml-4" }, [_vm._v("E")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mr-3" }, [_vm._v("B")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -38476,23 +38502,38 @@ var render = function() {
         _vm._v(" "),
         _c("span"),
         _vm._v(" "),
-        _vm._m(0)
+        _c("div", { staticClass: "w-100 d-flex justify-content-between" }, [
+          _c("p", { staticClass: "ml-4" }, [
+            _c("a", { attrs: { href: "/productos/edit/" + _vm.product.id } }, [
+              _vm._v("E")
+            ])
+          ]),
+          _vm._v("\n            -\n            "),
+          _c("p", { staticClass: "mr-3" }, [
+            _c(
+              "a",
+              { attrs: { href: "/productos/delete/" + _vm.product.id } },
+              [_vm._v("B")]
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "a",
+            { attrs: { href: "/categorias/filter/prod/" + _vm.product.id } },
+            [_vm._v("Categs")]
+          ),
+          _vm._v("\n            -\n            "),
+          _c(
+            "a",
+            { attrs: { href: "/tarifas/filter/prod/" + _vm.product.id } },
+            [_vm._v("Tarifas")]
+          )
+        ])
       ]
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-100 d-flex justify-content-between" }, [
-      _c("p", { staticClass: "ml-4" }, [_vm._v("E")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mr-3" }, [_vm._v("B")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -38528,7 +38569,7 @@ var render = function() {
         _vm._v(" "),
         _c("span"),
         _vm._v(" "),
-        _c("p", { staticClass: "idCol col-auto" }, [
+        _c("p", { staticClass: "idCol col-md-2" }, [
           _vm._v(_vm._s(_vm.tarifa.id_prod))
         ]),
         _vm._v(" "),
@@ -38546,29 +38587,30 @@ var render = function() {
         _vm._v(" "),
         _c("span"),
         _vm._v(" "),
-        _c("p", { staticClass: "col-md-1" }, [
+        _c("p", { staticClass: "col-md-2" }, [
           _vm._v(_vm._s(_vm.tarifa.precio))
         ]),
         _vm._v(" "),
         _c("span"),
         _vm._v(" "),
-        _vm._m(0)
+        _c("div", { staticClass: "w-100 d-flex justify-content-between" }, [
+          _c("p", { staticClass: "ml-4" }, [
+            _c("a", { attrs: { href: "/tarifas/edit/" + _vm.tarifa.id } }, [
+              _vm._v("E")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "mr-3" }, [
+            _c("a", { attrs: { href: "/tarifas/delete/" + _vm.tarifa.id } }, [
+              _vm._v("B")
+            ])
+          ])
+        ])
       ]
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-100 d-flex justify-content-between" }, [
-      _c("p", { staticClass: "ml-4" }, [_vm._v("E")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mr-3" }, [_vm._v("B")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -38624,23 +38666,24 @@ var render = function() {
         _vm._v(" "),
         _c("span"),
         _vm._v(" "),
-        _vm._m(0)
+        _c("div", { staticClass: "w-100 d-flex justify-content-between" }, [
+          _c("p", { staticClass: "ml-4" }, [
+            _c("a", { attrs: { href: "/usuarios/edit/" + _vm.user.id } }, [
+              _vm._v("E")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "mr-3" }, [
+            _c("a", { attrs: { href: "/usuarios/delete/" + _vm.user.id } }, [
+              _vm._v("B")
+            ])
+          ])
+        ])
       ]
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-100 d-flex justify-content-between" }, [
-      _c("p", { staticClass: "ml-4" }, [_vm._v("E")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mr-3" }, [_vm._v("B")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

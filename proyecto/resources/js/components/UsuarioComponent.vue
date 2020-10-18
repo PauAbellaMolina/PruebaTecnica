@@ -12,8 +12,8 @@
             <p class="fechaCol col-auto">{{user.fecha_nacimiento}}</p>
             <span></span>
             <div class="w-100 d-flex justify-content-between">
-                <p class="ml-4">E</p>
-                <p class="mr-3">B</p>
+                <p class="ml-4"><a :href="'/usuarios/edit/'+user.id">E</a></p>
+                <p class="mr-3"><a :href="'/usuarios/delete/'+user.id">B</a></p>
             </div>
         </div>
     </div>

@@ -3,17 +3,17 @@
         <div id="productosCards" class="card-body d-flex flex-row">
             <p class="idCol col-auto">{{tarifa.id}}</p>
             <span></span>
-            <p class="idCol col-auto">{{tarifa.id_prod}}</p>
+            <p class="idCol col-md-2">{{tarifa.id_prod}}</p>
             <span></span>
             <p class="fechaCol col-auto">{{tarifa.fecha_inicio}}</p>
             <span></span>
             <p class="fechaCol col-auto">{{tarifa.fecha_fin}}</p>
             <span></span>
-            <p class="col-md-1">{{tarifa.precio}}</p>
+            <p class="col-md-2">{{tarifa.precio}}</p>
             <span></span>
             <div class="w-100 d-flex justify-content-between">
-                <p class="ml-4">E</p>
-                <p class="mr-3">B</p>
+                <p class="ml-4"><a :href="'/tarifas/edit/'+tarifa.id">E</a></p>
+                <p class="mr-3"><a :href="'/tarifas/delete/'+tarifa.id">B</a></p>
             </div>
         </div>
     </div>

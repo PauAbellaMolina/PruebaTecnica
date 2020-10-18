@@ -77,18 +77,18 @@ class TarifasController extends Controller
     public function getTarifasProductIdPasadas($id_prod) {
         try{
             $tarifas = DB::table('tarifas')->where('id_prod', '=', $id_prod)->where('fecha_fin', '<', date('Y-m-d H:m:s'))->get();
-            return response()->json(['status' => 1, 'active tarifas by id_prod' => $tarifas]);
+            return response()->json(['status' => 1, 'past tarifas by id_prod' => $tarifas]);
         } catch(\Exception $e) {
-            return response()->json(['status' => 0, 'active tarifas by id_prod' => []], 500);
+            return response()->json(['status' => 0, 'past tarifas by id_prod' => []], 500);
         }
     }
     //Get future tarifas by id_prod
     public function getTarifasProductIdFuturas($id_prod) {
         try{
             $tarifas = DB::table('tarifas')->where('id_prod', '=', $id_prod)->where('fecha_inicio', '>', date('Y-m-d H:m:s'))->get();
-            return response()->json(['status' => 1, 'active tarifas by id_prod' => $tarifas]);
+            return response()->json(['status' => 1, 'future tarifas by id_prod' => $tarifas]);
         } catch(\Exception $e) {
-            return response()->json(['status' => 0, 'active tarifas by id_prod' => []], 500);
+            return response()->json(['status' => 0, 'future tarifas by id_prod' => []], 500);
         }
     }
 
@@ -132,6 +132,16 @@ class TarifasController extends Controller
             $tarifa = Tarifa::findOrFail($id);
             $tarifa->delete();
             return response()->json(['status' => 1, 'deleted_tarifa' => $tarifa]);
+        } catch(\Exception $e) {
+            return response()->json(['status' => 0], 500);
+        }
+    }
+    //Delete tarifa by id_categ and id_prod
+    public function deleteTarifaByProdId($id_prod) {
+        try{
+            $relationid = DB::table('tarifas')->where('id_prod', '=', $id_prod)->delete();
+
+            return response()->json(['status' => 1, 'deleted_tarifa' => $relationid]);
         } catch(\Exception $e) {
             return response()->json(['status' => 0], 500);
         }

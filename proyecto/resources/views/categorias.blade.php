@@ -4,10 +4,44 @@
 <div id="productos" class="container py-4 text-start">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <h1><strong>Categorias</strong></h1>
+            @if(@isset (request()->route()->parameters()['id_prod']))
+                <h1><strong>Categorías del producto con ID {{request()->route()->parameters()['id_prod']}}</strong></h1>
+            @else
+                <h1><strong>Todas las categorías</strong></h1>
+            @endif
             <hr/>
             <div class="container">
-                <div class="row justify-content-center">
+                @if(@isset (request()->route()->parameters()['id_prod']))
+                    <h5><a href="{{route('categorias/relation/nueva', ['id_prod' => request()->route()->parameters()['id_prod']])}}">Asignar nuevas categorías al producto</a></h5>
+                @endif
+                @if(!@isset (request()->route()->parameters()['id_prod']))
+                    <div class="d-flex justify-content-between align-items-end">
+                        <div>
+                            <h3>Filtrar:</h3>
+                            <form method="POST" action="{{route('categorias/id')}}">
+                                {{ csrf_field() }}
+                                <input type="text" name="id" value="" required placeholder="ID de categoría" />
+                                <input type="submit" value="Filtrar"/>
+                            </form>
+                            <div class="mt-1"></div>
+                            <form method="POST" action="{{route('categorias/codigo')}}">
+                                {{ csrf_field() }}
+                                <input type="text" name="codigo" value="" required placeholder="Código de categoría" />
+                                <input type="submit" value="Filtrar"/>
+                            </form>
+                            <div class="mt-1"></div>
+                            <form method="POST" action="{{route('categorias/nombre')}}">
+                                {{ csrf_field() }}
+                                <input type="text" name="nombre" value="" required placeholder="Nombres de categoría" />
+                                <input type="submit" value="Filtrar"/>
+                            </form>
+                        </div>
+                        <div>
+                            <h1><a href="{{route('categorias/nueva')}}">+</a></h1>
+                        </div>
+                    </div>
+                @endif
+                <div class="row justify-content-center mt-3">
                     <div class="col-md-12">
                         <div class="card-header d-flex flex-row font-weight-bolder">
                             <p class="idCol col-auto">ID</p>
