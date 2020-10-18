@@ -4,7 +4,7 @@
 <div id="usuarios" class="container py-4 text-start">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <h1><strong>Editar Producto con ID {{request()->route()->parameters()['id_prod']}}</strong></h1>
+            <h1 class="coloured"><strong>Editar Producto con ID {{request()->route()->parameters()['id_prod']}}</strong></h1>
             <hr/>
             <div class="container">
                 <div class="d-flex justify-content-between align-items-end">
@@ -30,7 +30,7 @@
                                     <input class="customInput" type="text" name="url_foto" id="url_foto" value="{{$response['url_foto']}}" required placeholder="Introduce la url de la foto" />
                                 </div>
                             </div>
-                            <br><input type="submit" value="Editar"/>
+                            <br><input class="customSubmitFiltro btn btn-primary" type="submit" value="Editar"/>
                         </form>
                     </div>
                 </div>
