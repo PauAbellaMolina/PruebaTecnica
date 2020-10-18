@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="d-flex justify-content-between align-items-end">
                     <div>
-                        <h3>Edita los datos del usuario:</h3>
+                        <h3 class="coloured">Edita los datos del usuario:</h3>
                         <form method="POST" action="{{route('usuarios/edit/post', ['id_user' => request()->route()->parameters()['id_user']])}}">
                             {{ csrf_field() }}
                             <div class="d-flex flex-column">
@@ -35,10 +35,10 @@
                                 </div>
                                 <div>
                                     <label class="customLabel" for="password">Password:</label>
-                                    <input class="customInput" type="password" name="password" id="password" value="" required placeholder="Introduce la contraseña" />
+                                    <input class="customInput" type="password" name="password" id="password" value="" required pattern=".{8,}" placeholder="Introduce la contraseña" />
                                 </div>
                             </div>
-                            <br><input type="submit" value="Editar"/>
+                            <br><input class="customSubmitFiltro btn btn-primary" type="submit" value="Editar"/>
                         </form>
                     </div>
                 </div>

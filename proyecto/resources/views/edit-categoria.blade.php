@@ -4,7 +4,7 @@
 <div id="usuarios" class="container py-4 text-start">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <h1><strong>Editar Categoría con ID {{request()->route()->parameters()['id_categ']}}</strong></h1>
+            <h1 class="coloured"><strong>Editar Categoría con ID {{request()->route()->parameters()['id_categ']}}</strong></h1>
             <hr/>
             <div class="container">
                 <div class="d-flex justify-content-between align-items-end">
@@ -26,7 +26,7 @@
                                     <textarea class="customInput" name="descripcion" id="descripcion" value="" placeholder="Introduce la descripción">{{$response['descripcion']}}</textarea>
                                 </div>
                             </div>
-                            <br><input type="submit" value="Editar"/>
+                            <br><input class="customSubmitFiltro btn btn-primary" type="submit" value="Editar"/>
                         </form>
                     </div>
                 </div>

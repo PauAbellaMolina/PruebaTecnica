@@ -35,7 +35,7 @@
                                 </div>
                                 <div>
                                     <label class="customLabel" for="password">Password:</label>
-                                    <input class="customInput" type="password" name="password" id="password" value="" required placeholder="Introduce la contraseña" />
+                                    <input class="customInput" type="password" name="password" id="password" value="" required pattern=".{8,}" placeholder="Introduce la contraseña" />
                                 </div>
                             </div>
                             <br><input class="customSubmitFiltro btn btn-primary" type="submit" value="Crear"/>
