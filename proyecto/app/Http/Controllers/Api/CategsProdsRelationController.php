@@ -63,10 +63,30 @@ class CategsProdsRelationController extends Controller
         }
     }
 
-    //Delete categoria by id
+    //Delete categoria by id_categ and id_prod
     public function deleteCategsProdsIds($id_categ, $id_prod) {
         try{
             $relationid = DB::table('categs_prods')->where('id_categ', '=', $id_categ)->where('id_prod', '=', $id_prod)->delete();
+
+            return response()->json(['status' => 1, 'deleted_relation' => $relationid]);
+        } catch(\Exception $e) {
+            return response()->json(['status' => 0], 500);
+        }
+    }
+    //Delete categoria by id_categ and id_prod
+    public function deleteCategsProdsByCategId($id_categ) {
+        try{
+            $relationid = DB::table('categs_prods')->where('id_categ', '=', $id_categ)->delete();
+
+            return response()->json(['status' => 1, 'deleted_relation' => $relationid]);
+        } catch(\Exception $e) {
+            return response()->json(['status' => 0], 500);
+        }
+    }
+    //Delete categoria by id_categ and id_prod
+    public function deleteCategsProdsByProdId($id_prod) {
+        try{
+            $relationid = DB::table('categs_prods')->where('id_prod', '=', $id_prod)->delete();
 
             return response()->json(['status' => 1, 'deleted_relation' => $relationid]);
         } catch(\Exception $e) {

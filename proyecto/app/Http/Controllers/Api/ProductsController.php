@@ -35,12 +35,21 @@ class ProductsController extends Controller
             return response()->json(['status' => 0, 'products' => []], 500);
         }
     }
+    //Get product by nombre
+    public function getProductNombre($nombre) {
+        try{
+            $products = Product::where('nombre', '=', $nombre)->get();
+            return response()->json(['status' => 1, 'products' => $products]);
+        } catch(\Exception $e) {
+            return response()->json(['status' => 0, 'products' => []], 500);
+        }
+    }
 
     //New product
     public function newProduct(Request $request) {
         try{
             $product = new Product;
-            $product->codigo_producto = Str::random(5);
+            $product->codigo_producto = $request->codigo_producto;
             $product->nombre = $request->nombre;
             $product->descripcion = $request->descripcion;
             $product->url_foto = $request->url_foto;
@@ -58,6 +67,7 @@ class ProductsController extends Controller
     public function editProductId($id, Request $request) {
         try{
             $product = Product::findOrFail($id);
+            $product->codigo_producto = $request->codigo_producto;
             $product->nombre = $request->nombre;
             $product->descripcion = $request->descripcion;
             $product->url_foto = $request->url_foto;

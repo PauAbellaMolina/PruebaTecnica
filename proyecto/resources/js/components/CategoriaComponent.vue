@@ -10,8 +10,9 @@
             <p class="col-md-6">{{categoria.descripcion}}</p>
             <span></span>
             <div class="w-100 d-flex justify-content-between">
-                <p class="ml-4">E</p>
-                <p class="mr-3">B</p>
+                <p class="ml-4"><a class="customLink" title="Editar" :href="'/categorias/edit/'+categoria.id">E</a></p>
+                <p v-if="categoria.id_prod > 0" class="mr-3"><a class="customLink borrar" title="Borrar" :href="'/categorias/delete/'+categoria.id+'/'+categoria.id_prod">B</a></p>
+                <p v-else class="mr-3"><a class="customLink borrar" title="Borrar" :href="'/categorias/delete/'+categoria.id">B</a></p>
             </div>
         </div>
     </div>

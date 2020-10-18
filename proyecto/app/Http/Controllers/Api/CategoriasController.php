@@ -37,12 +37,21 @@ class CategoriasController extends Controller
             return response()->json(['status' => 0, 'categorias' => []], 500);
         }
     }
+    //Get categoria by nombre
+    public function getCategoriaNombre($nombre) {
+        try{
+            $categorias = Categoria::where('nombre', '=', $nombre)->get();
+            return response()->json(['status' => 1, 'categorias' => $categorias]);
+        } catch(\Exception $e) {
+            return response()->json(['status' => 0, 'categorias' => []], 500);
+        }
+    }
 
     //New categoria
     public function newCategoria(Request $request) {
         try{
             $categoria = new Categoria;
-            $categoria->codigo_categoria = Str::random(5);
+            $categoria->codigo_categoria = $request->codigo_categoria;
             $categoria->nombre = $request->nombre;
             $categoria->descripcion = $request->descripcion;
             $categoria->created_at = date('Y-m-d H:m:s');
@@ -59,6 +68,7 @@ class CategoriasController extends Controller
     public function editCategoriaId($id, Request $request) {
         try{
             $categoria = Categoria::findOrFail($id);
+            $categoria->codigo_categoria = $request->codigo_categoria;
             $categoria->nombre = $request->nombre;
             $categoria->descripcion = $request->descripcion;
             $categoria->updated_at = date('Y-m-d H:m:s');

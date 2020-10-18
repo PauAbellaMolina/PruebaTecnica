@@ -8,6 +8,9 @@
 }
 
 /* USUARIOS */
+#usuarios {
+    color: #eeeeee;
+}
 #usuarios p {
     text-align: center;
     margin: 0;
@@ -38,6 +41,9 @@
 }
 
 /* PRODUCTOS y CATEGORIAS */
+#productos {
+    color: #eeeeee;
+}
 #productos p {
     text-align: center;
     margin: 0;

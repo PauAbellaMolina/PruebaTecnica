@@ -24,6 +24,8 @@ Route::group(['middleware' => 'auth:api'], function() {
     //Gets all y por id
     Route::get('get-users', 'Api\UsersController@getUsers');
     Route::get('get-users/{id}', 'Api\UsersController@getUserId');
+    Route::get('get-users/nombre/{nombre}', 'Api\UsersController@getUserNombre');
+    Route::get('get-users/email/{email}', 'Api\UsersController@getUserEmail');
 
     //New user
     Route::post('new-user', 'Api\UsersController@newUser');
@@ -40,6 +42,7 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::get('get-categs', 'Api\CategoriasController@getCategorias');
     Route::get('get-categs/{id}', 'Api\CategoriasController@getCategoriaId');
     Route::get('get-categs/codigo/{codigo_categoria}', 'Api\CategoriasController@getCategoriaCodigo');
+    Route::get('get-categs/nombre/{nombre}', 'Api\CategoriasController@getCategoriaNombre');
 
     //New categoria
     Route::post('new-categ', 'Api\CategoriasController@newCategoria');
@@ -56,6 +59,7 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::get('get-prods', 'Api\ProductsController@getProducts');
     Route::get('get-prods/{id}', 'Api\ProductsController@getProductId');
     Route::get('get-prods/codigo/{codigo_producto}', 'Api\ProductsController@getProductCodigo');
+    Route::get('get-prods/nombre/{nombre}', 'Api\ProductsController@getProductNombre');
 
     //New product
     Route::post('new-prod', 'Api\ProductsController@newProduct');
@@ -79,6 +83,10 @@ Route::group(['middleware' => 'auth:api'], function() {
 
     //Delete relation by id_categ and id_prod
     Route::delete('delete-categ-prod/{id_categ}/{id_prod}', 'Api\CategsProdsRelationController@deleteCategsProdsIds');
+    //Delete relation by id_categ, so when a categ is deleted, it's relations are too
+    Route::delete('delete-categ-prod-categ/{id_categ}', 'Api\CategsProdsRelationController@deleteCategsProdsByCategId');
+    //Delete relation by id_prod, so when a prod is deleted, it's relations are too
+    Route::delete('delete-categ-prod-prod/{id_prod}', 'Api\CategsProdsRelationController@deleteCategsProdsByProdId');
 
 
     //CRUD TARIFAS
@@ -99,6 +107,8 @@ Route::group(['middleware' => 'auth:api'], function() {
     //Edit por id
     Route::post('edit-tarifa/{id}', 'Api\TarifasController@editTarifaId');
 
-    //Delete relation by id_categ and id_prod
+    //Delete tarifa by id
     Route::delete('delete-tarifa/{id}', 'Api\TarifasController@deleteTarifaId');
+    //Delete tarifas by id_prod, so when a prod is deleted, it's tarifas are too
+    Route::delete('delete-tarifa/prod/{id}', 'Api\TarifasController@deleteTarifaByProdId');
 });
