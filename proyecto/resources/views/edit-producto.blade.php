@@ -14,20 +14,20 @@
                             {{ csrf_field() }}
                             <div class="d-flex flex-column">
                                 <div>
-                                    <label for="codigo_producto">Código del producto:</label>
-                                    <input type="text" name="codigo_producto" id="codigo_producto" value="{{$response['codigo_producto']}}" required placeholder="Introduce el código" />
+                                    <label class="customLabel" for="codigo_producto">Código del producto:</label>
+                                    <input class="customInput" type="text" name="codigo_producto" id="codigo_producto" value="{{$response['codigo_producto']}}" required placeholder="Introduce el código" />
                                 </div>
                                 <div>
-                                    <label for="nombre">Nombre:</label>
-                                    <input type="text" name="nombre" id="nombre" value="{{$response['nombre']}}" required placeholder="Introduce el nombre" />
+                                    <label class="customLabel" for="nombre">Nombre:</label>
+                                    <input class="customInput" type="text" name="nombre" id="nombre" value="{{$response['nombre']}}" required placeholder="Introduce el nombre" />
                                 </div>
                                 <div>
-                                    <label class="d-block float-left mr-1">Descripción:</label>
-                                    <textarea name="descripcion" id="descripcion" value="" placeholder="Introduce la descripción">{{$response['descripcion']}}</textarea>
+                                    <label class="customLabel" class="d-block float-left mr-1">Descripción:</label>
+                                    <textarea class="customInput" name="descripcion" id="descripcion" value="" placeholder="Introduce la descripción">{{$response['descripcion']}}</textarea>
                                 </div>
                                 <div>
-                                    <label for="url_foto">URL Foto:</label>
-                                    <input type="text" name="url_foto" id="url_foto" value="{{$response['url_foto']}}" required placeholder="Introduce la url de la foto" />
+                                    <label class="customLabel" for="url_foto">URL Foto:</label>
+                                    <input class="customInput" type="text" name="url_foto" id="url_foto" value="{{$response['url_foto']}}" required placeholder="Introduce la url de la foto" />
                                 </div>
                             </div>
                             <br><input type="submit" value="Editar"/>

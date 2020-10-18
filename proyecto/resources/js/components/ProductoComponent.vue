@@ -7,17 +7,19 @@
             <span></span>
             <p class="col-md-2">{{product.nombre}}</p>
             <span></span>
-            <p class="col-md-5">{{product.descripcion}}</p>
+            <p class="col-md-4">{{product.descripcion}}</p>
             <span></span>
             <p class="col-md-2">{{product.url_foto}}</p>
             <span></span>
-            <div class="w-100 d-flex justify-content-between">
-                <p class="ml-4"><a :href="'/productos/edit/'+product.id">E</a></p>
-                -
-                <p class="mr-3"><a :href="'/productos/delete/'+product.id">B</a></p>
-                <a :href="'/categorias/filter/prod/'+product.id">Categs</a>
-                -
-                <a :href="'/tarifas/filter/prod/'+product.id">Tarifas</a>
+            <div class="col-md-2 d-flex flex-column justify-content-between">
+                <div class="col-md-12 d-flex flex-row justify-content-between">
+                    <p class="ml-1"><a class="customLink" title="Editar" :href="'/productos/edit/'+product.id">E</a></p>
+                    <p class="mr-1"><a class="customLink borrar" title="Borrar" :href="'/productos/delete/'+product.id">B</a></p>
+                </div>
+                <div class="col-md-12 d-flex flex-row justify-content-between p-0">
+                    <a class="customLink" title="Categorias del producto" :href="'/categorias/filter/prod/'+product.id">Categs</a>
+                    <a class="customLink" title="Tarifas del producto" :href="'/tarifas/filter/prod/'+product.id">Tarifas</a>
+                </div>
             </div>
         </div>
     </div>

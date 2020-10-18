@@ -1,10 +1,11 @@
 #sideMenu {
-    border-right: 1px solid lightgray;
-    height: 100vh;
+    font-family: 'Rubik', sans-serif !important;
+    border-right: 1px solid #272b31;
+    min-height: 93vh;
     width: 20%;
 }
     #sideMenu div {
-        border-top: 1px solid lightgray;
+        border-top: 1px solid #272b31;
         height:80px;
         display: flex;
         flex-direction: column;
@@ -13,7 +14,11 @@
         font-size: 1.3em;
     }
         #sideMenu div a {
-            color: black;
+            color: #eeeeee;
+        }
+        #sideMenu div a:hover {
+            font-style: italic;
+            text-decoration: none;
         }
 
 .logOutButton {

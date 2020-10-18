@@ -14,16 +14,16 @@
                             {{ csrf_field() }}
                             <div class="d-flex flex-column">
                                 <div>
-                                    <label for="codigo_categoria">Código de la categoría:</label>
-                                    <input type="text" name="codigo_categoria" id="codigo_categoria" value="{{$response['codigo_categoria']}}" required placeholder="Introduce el código" />
+                                    <label class="customLabel" for="codigo_categoria">Código categoría:</label>
+                                    <input class="customInput" type="text" name="codigo_categoria" id="codigo_categoria" value="{{$response['codigo_categoria']}}" required placeholder="Introduce el código" />
                                 </div>
                                 <div>
-                                    <label for="nombre">Nombre:</label>
-                                    <input type="text" name="nombre" id="nombre" value="{{$response['nombre']}}" required placeholder="Introduce el nombre" />
+                                    <label class="customLabel" for="nombre">Nombre:</label>
+                                    <input class="customInput" type="text" name="nombre" id="nombre" value="{{$response['nombre']}}" required placeholder="Introduce el nombre" />
                                 </div>
                                 <div>
-                                    <label class="d-block float-left mr-1">Descripción:</label>
-                                    <textarea name="descripcion" id="descripcion" value="" placeholder="Introduce la descripción">{{$response['descripcion']}}</textarea>
+                                    <label class="customLabel d-block float-left mr-1">Descripción:</label>
+                                    <textarea class="customInput" name="descripcion" id="descripcion" value="" placeholder="Introduce la descripción">{{$response['descripcion']}}</textarea>
                                 </div>
                             </div>
                             <br><input type="submit" value="Editar"/>

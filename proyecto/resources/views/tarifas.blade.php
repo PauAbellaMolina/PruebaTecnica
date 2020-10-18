@@ -5,9 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             @if(@isset (request()->route()->parameters()['id_prod']))
-                <h1><strong>Tarifas del producto con ID {{request()->route()->parameters()['id_prod']}}</strong></h1>
+                <h1 class="coloured"><strong>Tarifas del producto con ID {{request()->route()->parameters()['id_prod']}}</strong></h1>
             @else
-                <h1><strong>Todas las tarifas</strong></h1>
+                <h1 class="coloured"><strong>Todas las tarifas</strong></h1>
             @endif
             <hr/>
             <div class="container">
@@ -16,32 +16,32 @@
                         <h3>Filtrar tarifas:</h3>
 
                         @if(@isset (request()->route()->parameters()['id_prod']))
-                            <a href="/tarifas/filter/prod/<?php echo request()->route()->parameters()['id_prod']; ?>">Todas</a>
+                            <a class="customLink" href="/tarifas/filter/prod/<?php echo request()->route()->parameters()['id_prod']; ?>">Todas</a>
                             -
-                            <a href="/tarifas/filter/prod/<?php echo request()->route()->parameters()['id_prod']; ?>/activas">Activas</a>
+                            <a class="customLink" href="/tarifas/filter/prod/<?php echo request()->route()->parameters()['id_prod']; ?>/activas">Activas</a>
                             -
-                            <a href="/tarifas/filter/prod/<?php echo request()->route()->parameters()['id_prod']; ?>/pasadas">Pasadas</a>
+                            <a class="customLink" href="/tarifas/filter/prod/<?php echo request()->route()->parameters()['id_prod']; ?>/pasadas">Pasadas</a>
                             -
-                            <a href="/tarifas/filter/prod/<?php echo request()->route()->parameters()['id_prod']; ?>/futuras">Futuras</a>
+                            <a class="customLink" href="/tarifas/filter/prod/<?php echo request()->route()->parameters()['id_prod']; ?>/futuras">Futuras</a>
 
                         @else
-                            <a href="/tarifas/filter">Todas</a>
+                            <a class="customLink" href="/tarifas/filter">Todas</a>
                             -
-                            <a href="/tarifas/filter/activas">Activas</a>
+                            <a class="customLink" href="/tarifas/filter/activas">Activas</a>
                             -
-                            <a href="/tarifas/filter/pasadas">Pasadas</a>
+                            <a class="customLink" href="/tarifas/filter/pasadas">Pasadas</a>
                             -
-                            <a href="/tarifas/filter/futuras">Futuras</a>
+                            <a class="customLink" href="/tarifas/filter/futuras">Futuras</a>
                         @endif
                     </div>
                     <div>
-                        <h1><a href="{{route('tarifas/nueva')}}">+</a></h1>
+                        <h1><a class="customLink" title="Nueva tarifa" href="{{route('tarifas/nueva')}}">+</a></h1>
                     </div>
                 </div>
 
                 <div class="row justify-content-start mt-3">
                     <div class="col-md-10">
-                        <div class="card-header d-flex flex-row font-weight-bolder">
+                        <div class="card-header d-flex flex-row font-weight-bolder coloured">
                             <p class="idCol col-auto">ID</p>
                             <p class="idCol col-md-2">ID Producto</p>
                             <p class="fechaCol col-auto">Fecha Inicio</p>

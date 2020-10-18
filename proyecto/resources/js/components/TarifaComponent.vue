@@ -12,8 +12,8 @@
             <p class="col-md-2">{{tarifa.precio}}</p>
             <span></span>
             <div class="w-100 d-flex justify-content-between">
-                <p class="ml-4"><a :href="'/tarifas/edit/'+tarifa.id">E</a></p>
-                <p class="mr-3"><a :href="'/tarifas/delete/'+tarifa.id">B</a></p>
+                <p class="ml-4"><a class="customLink" title="Editar" :href="'/tarifas/edit/'+tarifa.id">E</a></p>
+                <p class="mr-3"><a class="customLink borrar" title="Borrar" :href="'/tarifas/delete/'+tarifa.id">B</a></p>
             </div>
         </div>
     </div>

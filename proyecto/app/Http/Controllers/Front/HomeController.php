@@ -27,11 +27,13 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $userId = Auth::user()->id;
         $userNombre = Auth::user()->nombre;
         $userApellidos = Auth::user()->apellidos;
         $userEmail = Auth::user()->email;
 
         $userInfo = [
+            $userId,
             $userNombre,
             $userApellidos,
             $userEmail

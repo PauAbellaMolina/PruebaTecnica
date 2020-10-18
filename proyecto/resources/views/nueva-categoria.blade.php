@@ -4,7 +4,7 @@
 <div id="usuarios" class="container py-4 text-start">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <h1><strong>Nueva Categoría</strong></h1>
+            <h1 class="coloured"><strong>Nueva Categoría</strong></h1>
             <hr/>
             <div class="container">
                 <div class="d-flex justify-content-between align-items-end">
@@ -14,19 +14,19 @@
                             {{ csrf_field() }}
                             <div class="d-flex flex-column">
                                 <div>
-                                    <label for="codigo_categoria">Código categoría:</label>
-                                    <input type="text" name="codigo_categoria" id="codigo_categoria" value="" required placeholder="Introduce el código" />
+                                    <label class="customLabel" for="codigo_categoria">Código categoría:</label>
+                                    <input class="customInput" type="text" name="codigo_categoria" id="codigo_categoria" value="" required placeholder="Introduce el código" />
                                 </div>
                                 <div>
-                                    <label for="nombre">Nombre:</label>
-                                    <input type="text" name="nombre" id="nombre" value="" required placeholder="Introduce el nombre" />
+                                    <label class="customLabel" for="nombre">Nombre:</label>
+                                    <input class="customInput" type="text" name="nombre" id="nombre" value="" required placeholder="Introduce el nombre" />
                                 </div>
                                 <div>
-                                    <label class="d-block float-left mr-1">Descripción:</label>
-                                    <textarea name="descripcion" id="descripcion" value="" placeholder="Introduce la descripción"></textarea>
+                                    <label class="customLabel d-block float-left mr-1">Descripción:</label>
+                                    <textarea class="customInput" name="descripcion" id="descripcion" value="" placeholder="Introduce la descripción"></textarea>
                                 </div>
                             </div>
-                            <br><input type="submit" value="Crear"/>
+                            <br><input class="customSubmitFiltro btn btn-primary" type="submit" value="Crear"/>
                         </form>
                     </div>
                 </div>

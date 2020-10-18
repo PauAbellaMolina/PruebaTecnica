@@ -14,20 +14,20 @@
                             {{ csrf_field() }}
                             <div class="d-flex flex-column">
                                 <div>
-                                    <label for="id_prod">ID Producto:</label>
-                                    <input type="text" name="id_prod" id="id_prod" value="{{$response['id_prod']}}" required placeholder="Introduce el ID del producto" />
+                                    <label class="customLabel" for="id_prod">ID Producto:</label>
+                                    <input class="customInput" type="text" name="id_prod" id="id_prod" value="{{$response['id_prod']}}" required placeholder="Introduce el ID del producto" />
                                 </div>
                                 <div>
-                                    <label for="fecha_inicio">Fecha de inicio:</label>
-                                    <input type="date" name="fecha_inicio" id="fecha_inicio" value="{{date('Y-m-d', strtotime($response['fecha_inicio']))}}" required placeholder="Introduce la fecha de inicio" />
+                                    <label class="customLabel" for="fecha_inicio">Fecha de inicio:</label>
+                                    <input class="customInput" type="date" name="fecha_inicio" id="fecha_inicio" value="{{date('Y-m-d', strtotime($response['fecha_inicio']))}}" required placeholder="Introduce la fecha de inicio" />
                                 </div>
                                 <div>
-                                    <label for="fecha_fin">Fecha de fin:</label>
-                                    <input type="date" name="fecha_fin" id="fecha_fin" value="{{date('Y-m-d', strtotime($response['fecha_fin']))}}" required placeholder="Introduce la fecha de fin" />
+                                    <label class="customLabel" for="fecha_fin">Fecha de fin:</label>
+                                    <input class="customInput" type="date" name="fecha_fin" id="fecha_fin" value="{{date('Y-m-d', strtotime($response['fecha_fin']))}}" required placeholder="Introduce la fecha de fin" />
                                 </div>
                                 <div>
-                                    <label for="precio">Precio:</label>
-                                    <input type="text" name="precio" id="precio" value="{{$response['precio']}}" required placeholder="Introduce el precio" />
+                                    <label class="customLabel" for="precio">Precio:</label>
+                                    <input class="customInput" type="text" name="precio" id="precio" value="{{$response['precio']}}" required placeholder="Introduce el precio" />
                                 </div>
                             </div>
                             <br><input type="submit" value="Editar"/>

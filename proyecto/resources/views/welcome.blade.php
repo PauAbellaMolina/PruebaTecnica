@@ -8,16 +8,27 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@500&display=swap" rel="stylesheet">
 
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
+                background-color: #393e46;
+                color: #eeeeee;
+                font-family: 'Rubik Mono One', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+            }
+
+            ::selection {
+                color: #393e46;
+                background-color: #edc988;
+            }
+
+            .customLink:hover {
+                color: #eeb955 !important;
+                font-style: italic;
             }
 
             .full-height {
@@ -40,59 +51,67 @@
                 top: 18px;
             }
 
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
+            .top-right a {
+                color: #edc988;
                 padding: 0 25px;
-                font-size: 13px;
+                font-size: 25px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
-                text-transform: uppercase;
+            }
+
+            .content {
+                text-align: center;
+                font-family: 'Rubik', sans-serif;
+            }
+
+            .title {
+                color: #edc988;
+                text-shadow: 4px 5px 9px black;
+                font-size: 84px;
+                font-family: 'Rubik Mono One', sans-serif;
+            }
+
+            .links > a {
+                color: #edc988;
+                padding: 0 25px;
+                font-size: 16px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
             }
 
             .m-b-md {
                 margin-bottom: 30px;
+            }
+
+            .coloured {
+                color: #edc988 !important;
             }
         </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
-                <div class="top-right links">
+                <div class="top-right">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a class="customLink" href="{{ url('/home') }}">Entrar</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a class="customLink" href="{{ route('login') }}">Login</a>
 
-                        @if (Route::has('register'))
+                        {{-- @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
-                        @endif
+                        @endif --}}
                     @endauth
                 </div>
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+                <div class="title m-b-md">PadawanProject</div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <h3>Made with ❤️ by <span class="coloured">Pau Abella</span></h3>
+                    <a class="customLink" href="https://pauabella.dev">pauabella.dev</a>
                 </div>
             </div>
         </div>
