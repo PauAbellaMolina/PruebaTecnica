@@ -7,9 +7,14 @@
             <span></span>
             <p class="col-md-2">{{product.nombre}}</p>
             <span></span>
-            <p class="col-md-4">{{product.descripcion}}</p>
+            <p class="col-md-3">{{product.descripcion}}</p>
             <span></span>
             <p class="col-md-2">{{product.url_foto}}</p>
+            <span></span>
+            <div class="col-md-1 d-flex flex-column align-items-center">
+                <p class="d-flex flex-row">{{product.precio}}</p>
+                <a class="customLink mt-1" title="Tarifas del producto" :href="'/tarifas/filter/prod/'+product.id">Tarifas</a>
+            </div>
             <span></span>
             <div class="col-md-2 d-flex flex-column justify-content-between">
                 <div class="col-md-12 d-flex flex-row justify-content-between ml-2">
@@ -30,9 +35,8 @@
                         </a>
                     </p>
                 </div>
-                <div class="col-md-12 d-flex flex-row justify-content-between ml-2 p-0">
-                    <a class="customLink" title="Categorias del producto" :href="'/categorias/filter/prod/'+product.id">Categs</a>
-                    <a class="customLink" title="Tarifas del producto" :href="'/tarifas/filter/prod/'+product.id">Tarifas</a>
+                <div class="col-md-12 d-flex flex-row justify-content-center ml-2 p-0 mt-1">
+                    <a class="customLink" title="Categorias del producto" :href="'/categorias/filter/prod/'+product.id">Categorías</a>
                 </div>
             </div>
         </div>

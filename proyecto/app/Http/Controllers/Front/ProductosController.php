@@ -20,6 +20,14 @@ class ProductosController extends Controller
         $apiToken = Auth::user()->api_token;
         $response = Http::withToken($apiToken)->get('http://proyecto.test/api/get-prods')['products'];
 
+        for ($i=0; $i < sizeof($response); $i++) {
+            $responseTarifa = Http::withToken($apiToken)->get('http://proyecto.test/api/get-tarifas/prod/'.$response[$i]['id'].'/activas')['active tarifas by id_prod'];
+
+            if ($responseTarifa != []) {
+                $response[$i]['precio'] = $responseTarifa['0']['precio'];
+            }
+        }
+
         return view('products', compact('response'));
     }
 
@@ -29,7 +37,9 @@ class ProductosController extends Controller
         $id = $request->id;
         $apiToken = Auth::user()->api_token;
         $responseAux = Http::withToken($apiToken)->get('http://proyecto.test/api/get-prods/'.$id)['products'];
+        $responseTarifa = Http::withToken($apiToken)->get('http://proyecto.test/api/get-tarifas/prod/'.$id.'/activas')['active tarifas by id_prod'];
         array_push($response, $responseAux);
+        $response['0']['precio'] = $responseTarifa['0']['precio'];
 
         return view('products', compact('response'));
     }
@@ -39,6 +49,8 @@ class ProductosController extends Controller
         $codigo = $request->codigo;
         $apiToken = Auth::user()->api_token;
         $response = Http::withToken($apiToken)->get('http://proyecto.test/api/get-prods/codigo/'.$codigo)['products'];
+        $responseTarifa = Http::withToken($apiToken)->get('http://proyecto.test/api/get-tarifas/prod/'.$response['0']['id'].'/activas')['active tarifas by id_prod'];
+        $response['0']['precio'] = $responseTarifa['0']['precio'];
 
         return view('products', compact('response'));
     }
@@ -48,6 +60,8 @@ class ProductosController extends Controller
         $nombre = $request->nombre;
         $apiToken = Auth::user()->api_token;
         $response = Http::withToken($apiToken)->get('http://proyecto.test/api/get-prods/nombre/'.$nombre)['products'];
+        $responseTarifa = Http::withToken($apiToken)->get('http://proyecto.test/api/get-tarifas/prod/'.$response['0']['id'].'/activas')['active tarifas by id_prod'];
+        $response['0']['precio'] = $responseTarifa['0']['precio'];
 
         return view('products', compact('response'));
     }

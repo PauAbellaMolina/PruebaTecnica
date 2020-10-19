@@ -5,7 +5,7 @@
         <div><a href="{{ route('usuarios') }}">Usuarios</a></div>
         <div><a href="{{ route('productos') }}">Productos</a></div>
         <div><a href="{{ route('tarifas/filter/all') }}">Tarifas</a></div>
-        <div><a href="{{ route('categorias') }}">Categorias</a></div>
+        <div><a href="{{ route('categorias') }}">Categorías</a></div>
     </div>
     @yield('main')
 </div>
