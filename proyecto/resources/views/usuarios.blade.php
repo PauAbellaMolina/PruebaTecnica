@@ -38,9 +38,9 @@
                             <p class="idCol col-auto">ID</p>
                             <p class="col-md-2">Nombre</p>
                             <p class="col-md-2">Apellidos</p>
-                            <p class="col-md-4">Email</p>
+                            <p class="col-md-3">Email</p>
                             <p class="fechaCol col-auto">Fecha Nacimiento</p>
-                            <p class="col-auto">Acciones</p>
+                            <p class="col-md-2">Acciones</p>
                         </div>
                             @foreach ($response as $user)
                                 <div id="app"><usuario-component v-bind:user="{{ json_encode($user) }}"></usuario-component></div>

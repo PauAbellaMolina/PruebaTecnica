@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="row justify-content-start mt-3">
-                    <div class="col-md-10">
+                    <div class="col-md-11">
                         <div class="card-header d-flex flex-row font-weight-bolder coloured">
                             <p class="idCol col-auto">ID</p>
                             <p class="idCol col-md-2">ID Producto</p>
