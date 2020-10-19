@@ -78,7 +78,7 @@ class UsersController extends Controller
             $user->apellidos = $request->apellidos;
             $user->fecha_nacimiento = $request->fecha_nacimiento;
             $user->email = $request->email;
-            $user->password = $request->password;
+            $user->password = Hash::make($request->password);
             $user->url_foto = $request->url_foto;
             $user->updated_at = date('Y-m-d H:m:s');
             $user->save();
