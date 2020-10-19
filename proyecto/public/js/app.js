@@ -2003,6 +2003,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     product: String
@@ -38542,7 +38546,7 @@ var render = function() {
         _vm._v(" "),
         _c("span"),
         _vm._v(" "),
-        _c("p", { staticClass: "col-md-4" }, [
+        _c("p", { staticClass: "col-md-3" }, [
           _vm._v(_vm._s(_vm.product.descripcion))
         ]),
         _vm._v(" "),
@@ -38551,6 +38555,30 @@ var render = function() {
         _c("p", { staticClass: "col-md-2" }, [
           _vm._v(_vm._s(_vm.product.url_foto))
         ]),
+        _vm._v(" "),
+        _c("span"),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "col-md-1 d-flex flex-column align-items-center" },
+          [
+            _c("p", { staticClass: "d-flex flex-row" }, [
+              _vm._v(_vm._s(_vm.product.precio))
+            ]),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "customLink mt-1",
+                attrs: {
+                  title: "Tarifas del producto",
+                  href: "/tarifas/filter/prod/" + _vm.product.id
+                }
+              },
+              [_vm._v("Tarifas")]
+            )
+          ]
+        ),
         _vm._v(" "),
         _c("span"),
         _vm._v(" "),
@@ -38661,7 +38689,7 @@ var render = function() {
               "div",
               {
                 staticClass:
-                  "col-md-12 d-flex flex-row justify-content-between ml-2 p-0"
+                  "col-md-12 d-flex flex-row justify-content-center ml-2 p-0 mt-1"
               },
               [
                 _c(
@@ -38673,19 +38701,7 @@ var render = function() {
                       href: "/categorias/filter/prod/" + _vm.product.id
                     }
                   },
-                  [_vm._v("Categs")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass: "customLink",
-                    attrs: {
-                      title: "Tarifas del producto",
-                      href: "/tarifas/filter/prod/" + _vm.product.id
-                    }
-                  },
-                  [_vm._v("Tarifas")]
+                  [_vm._v("Categorías")]
                 )
               ]
             )

@@ -38,8 +38,9 @@
                             <p class="idCol col-auto">ID</p>
                             <p class="col-md-1">Codigo</p>
                             <p class="col-md-2">Nombre</p>
-                            <p class="col-md-4">Descripción</p>
+                            <p class="col-md-3">Descripción</p>
                             <p class="col-md-2">URL Foto</p>
+                            <p class="col-md-1 ml-1">Precio</p>
                             <p class="col-md-2">Acciones</p>
                         </div>
                             @foreach ($response as $product)
