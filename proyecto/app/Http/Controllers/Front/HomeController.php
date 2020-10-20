@@ -31,12 +31,14 @@ class HomeController extends Controller
         $userNombre = Auth::user()->nombre;
         $userApellidos = Auth::user()->apellidos;
         $userEmail = Auth::user()->email;
+        $userFoto = Auth::user()->url_foto;
 
         $userInfo = [
             $userId,
             $userNombre,
             $userApellidos,
-            $userEmail
+            $userEmail,
+            $userFoto
         ];
 
         /* $secureUserApiToken = Crypt::encryptString(Auth::user()->api_token); //Crypt::decryptString(session('api_token') to decrypt the api token)

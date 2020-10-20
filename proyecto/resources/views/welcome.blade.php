@@ -27,8 +27,12 @@
             }
 
             .customLink:hover {
-                color: #eeb955 !important;
                 font-style: italic;
+                text-shadow: .1em .1em 0 #ea5455;
+            }
+
+            .noShadow:hover {
+                text-shadow: none !important;
             }
 
             .full-height {
@@ -88,6 +92,13 @@
             .coloured {
                 color: #edc988 !important;
             }
+
+            .logo {
+                text-shadow: .05em .055em 0 #ea5455;
+            }
+            .logo:hover {
+                text-shadow: .1em .1em 0 #ea5455;
+            }
         </style>
     </head>
     <body>
@@ -95,7 +106,7 @@
             @if (Route::has('login'))
                 <div class="top-right">
                     @auth
-                        <a class="customLink" href="{{ url('/home') }}">Entrar</a>
+                        <a class="customLink noShadow" href="{{ url('/home') }}">Entrar</a>
                     @else
                         <a class="customLink" href="{{ route('login') }}">Login</a>
 
@@ -107,7 +118,7 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">PadawanProject</div>
+                <div class="title logo m-b-md">PadawanProject</div>
 
                 <div class="links">
                     <h3>Made with ❤️ by <span class="coloured">Pau Abella</span></h3>
