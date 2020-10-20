@@ -4,7 +4,7 @@
 <div id="usuarios" class="container py-4 text-start">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <h1 class="coloured"><strong>Nueva Tarifa</strong></h1>
+            <h1 class="title">Nueva Tarifa</h1>
             <hr/>
             <div class="container">
                 <div class="d-flex justify-content-between align-items-end">
@@ -12,7 +12,7 @@
                         <h3>Introduce los datos de la nueva categoría:</h3>
                         <form method="POST" action="{{route('tarifas/nueva/post')}}">
                             {{ csrf_field() }}
-                            <div class="d-flex flex-column">
+                            <div class="editForm d-flex flex-column">
                                 <div>
                                     <label class="customLabel" for="id_prod">ID Producto:</label>
                                     <input class="customInput" type="text" name="id_prod" id="id_prod" value="" required placeholder="Introduce el ID del producto" />

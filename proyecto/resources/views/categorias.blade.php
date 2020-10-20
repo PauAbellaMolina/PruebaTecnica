@@ -5,9 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             @if(@isset (request()->route()->parameters()['id_prod']))
-                <h1 class="coloured"><strong>Categorías del producto con ID {{request()->route()->parameters()['id_prod']}}</strong></h1>
+                <h1 class="title">Categorías del producto con ID {{request()->route()->parameters()['id_prod']}}</h1>
             @else
-                <h1 class="coloured"><strong>Todas las categorías</strong></h1>
+                <h1 class="title">Todas las categorías</h1>
             @endif
             <hr/>
             <div class="container">
@@ -23,14 +23,12 @@
                                 <input class="customInputFiltro" type="text" name="id" value="" required placeholder="ID de categoría" />
                                 <input class="customSubmitFiltro btn btn-primary ml-2" type="submit" value="Filtrar"/>
                             </form>
-                            <div class="mt-1"></div>
-                            <form method="POST" action="{{route('categorias/codigo')}}">
+                            <form class="mt-1" method="POST" action="{{route('categorias/codigo')}}">
                                 {{ csrf_field() }}
                                 <input class="customInputFiltro" type="text" name="codigo" value="" required placeholder="Código de categoría" />
                                 <input class="customSubmitFiltro btn btn-primary ml-2" type="submit" value="Filtrar"/>
                             </form>
-                            <div class="mt-1"></div>
-                            <form method="POST" action="{{route('categorias/nombre')}}">
+                            <form class="mt-1" method="POST" action="{{route('categorias/nombre')}}">
                                 {{ csrf_field() }}
                                 <input class="customInputFiltro" type="text" name="nombre" value="" required placeholder="Nombres de categoría" />
                                 <input class="customSubmitFiltro btn btn-primary ml-2" type="submit" value="Filtrar"/>
@@ -50,10 +48,9 @@
                             <p class="col-md-6">Descripción</p>
                             <p class="col-auto">Acciones</p>
                         </div>
-                            @foreach ($response as $categoria)
-                                <div id="app"><categoria-component v-bind:categoria="{{ json_encode($categoria) }}"></categoria-component></div>
-                            @endforeach
-                        </div>
+                        @foreach ($response as $categoria)
+                            <div id="app"><categoria-component v-bind:categoria="{{ json_encode($categoria) }}"></categoria-component></div>
+                        @endforeach
                     </div>
                 </div>
             </div>

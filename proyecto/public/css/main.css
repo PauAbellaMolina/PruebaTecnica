@@ -7,6 +7,16 @@
     min-width: 210px;
 }
 
+.title {
+    color: #edc988 !important;
+    text-shadow: .08em .08em 0 rgba(234, 84, 85, 0.8);
+    font-weight: bold;
+}
+
+.editForm > div {
+    margin-top: 4px;
+}
+
 /* HOME */
 .imgPerfil {
     width: 250px;
@@ -46,10 +56,6 @@
     border-right: 1px solid grey;
 }
 
-.test {
-    border: 1px solid red;
-}
-
 /* PRODUCTOS y CATEGORIAS */
 #productos {
     color: #eeeeee;
@@ -77,4 +83,16 @@
 
 #productos #productosCards span {
     border-right: 1px solid grey;
+}
+
+.imgProd {
+    width: 550px;
+    border-radius: 10px;
+}
+.imgProdEdit {
+    width: 300px;
+}
+.imgProd:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 0 #ea5455;
 }

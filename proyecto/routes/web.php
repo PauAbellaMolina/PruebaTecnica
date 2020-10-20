@@ -27,6 +27,8 @@ Route::get('/usuarios', 'Front\UsuariosController@index')->name('usuarios');
 Route::post('/usuarios/id', 'Front\UsuariosController@usuariosId')->name('usuarios/id');
 Route::post('/usuarios/nombre', 'Front\UsuariosController@usuariosNombre')->name('usuarios/nombre');
 Route::post('/usuarios/email', 'Front\UsuariosController@usuariosEmail')->name('usuarios/email');
+//Details page
+Route::get('/usuarios/details/{id_user}', 'Front\UsuariosController@detailsUsuario')->name('usuarios/details');
 //New user
 Route::get('/usuarios/nuevo', 'Front\UsuariosController@nuevoUsuario')->name('usuarios/nuevo');
 Route::post('/usuarios/nuevo/post', 'Front\UsuariosController@nuevoUsuarioPost')->name('usuarios/nuevo/post');
@@ -43,6 +45,8 @@ Route::get('/productos', 'Front\ProductosController@index')->name('productos');
 Route::post('/productos/id', 'Front\ProductosController@productosId')->name('productos/id');
 Route::post('/productos/codigo', 'Front\ProductosController@productosCodigo')->name('productos/codigo');
 Route::post('/productos/nombre', 'Front\ProductosController@productosNombre')->name('productos/nombre');
+//Details page
+Route::get('/productos/details/{id_prod}', 'Front\ProductosController@detailsProducto')->name('productos/details');
 //New prod
 Route::get('/productos/nuevo', 'Front\ProductosController@nuevoProducto')->name('productos/nuevo');
 Route::post('/productos/nuevo/post', 'Front\ProductosController@nuevoProductoPost')->name('productos/nuevo/post');

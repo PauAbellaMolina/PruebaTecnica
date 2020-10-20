@@ -4,7 +4,7 @@
 <div id="usuarios" class="container py-4 text-start">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <h1 class="coloured"><strong>Editar Tarifa con ID {{request()->route()->parameters()['id_tarifa']}}</strong></h1>
+            <h1 class="title">Editar Tarifa con ID {{request()->route()->parameters()['id_tarifa']}}</h1>
             <hr/>
             <div class="container">
                 <div class="d-flex justify-content-between align-items-end">
@@ -12,7 +12,7 @@
                         <h3>Edita los datos de la tarifa:</h3>
                         <form method="POST" action="{{route('tarifas/edit/post', ['id_tarifa' => request()->route()->parameters()['id_tarifa']])}}">
                             {{ csrf_field() }}
-                            <div class="d-flex flex-column">
+                            <div class="editForm d-flex flex-column">
                                 <div>
                                     <label class="customLabel" for="id_prod">ID Producto:</label>
                                     <input class="customInput" type="text" name="id_prod" id="id_prod" value="{{$response['id_prod']}}" required placeholder="Introduce el ID del producto" />

@@ -4,7 +4,7 @@
 <div id="usuarios" class="container py-4 text-start">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <h1 class="coloured"><strong>Editar Categoría con ID {{request()->route()->parameters()['id_categ']}}</strong></h1>
+            <h1 class="title">Editar Categoría con ID {{request()->route()->parameters()['id_categ']}}</h1>
             <hr/>
             <div class="container">
                 <div class="d-flex justify-content-between align-items-end">
@@ -12,7 +12,7 @@
                         <h3>Edita los datos de la categoría:</h3>
                         <form method="POST" action="{{route('categorias/edit/post', ['id_categ' => request()->route()->parameters()['id_categ']])}}">
                             {{ csrf_field() }}
-                            <div class="d-flex flex-column">
+                            <div class="editForm d-flex flex-column">
                                 <div>
                                     <label class="customLabel" for="codigo_categoria">Código categoría:</label>
                                     <input class="customInput" type="text" name="codigo_categoria" id="codigo_categoria" value="{{$response['codigo_categoria']}}" required placeholder="Introduce el código" />
