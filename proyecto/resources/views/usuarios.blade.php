@@ -4,7 +4,7 @@
 <div id="usuarios" class="container py-4 text-start">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <h1 class="coloured"><strong>Usuarios</strong></h1>
+            <h1 class="title">Usuarios</h1>
             <hr/>
             <div class="container">
                 <div class="d-flex justify-content-between align-items-end">
@@ -15,14 +15,12 @@
                             <input class="customInputFiltro" type="text" name="id" value="" required placeholder="ID del usuario" />
                             <input class="customSubmitFiltro btn btn-primary ml-2" type="submit" value="Filtrar"/>
                         </form>
-                        <div class="mt-1"></div>
-                        <form method="POST" action="{{route('usuarios/nombre')}}">
+                        <form class="mt-1" method="POST" action="{{route('usuarios/nombre')}}">
                             {{ csrf_field() }}
                             <input class="customInputFiltro" type="text" name="nombre" value="" required placeholder="Nombre del usuario" />
                             <input class="customSubmitFiltro btn btn-primary ml-2" type="submit" value="Filtrar"/>
                         </form>
-                        <div class="mt-1"></div>
-                        <form method="POST" action="{{route('usuarios/email')}}">
+                        <form class="mt-1" method="POST" action="{{route('usuarios/email')}}">
                             {{ csrf_field() }}
                             <input class="customInputFiltro" type="text" name="email" value="" required placeholder="Email del usuario" />
                             <input class="customSubmitFiltro btn btn-primary ml-2" type="submit" value="Filtrar"/>
@@ -42,10 +40,9 @@
                             <p class="fechaCol col-auto">Fecha Nacimiento</p>
                             <p class="col-md-2">Acciones</p>
                         </div>
-                            @foreach ($response as $user)
-                                <div id="app"><usuario-component v-bind:user="{{ json_encode($user) }}"></usuario-component></div>
-                            @endforeach
-                        </div>
+                        @foreach ($response as $user)
+                            <div id="app"><usuario-component v-bind:user="{{ json_encode($user) }}"></usuario-component></div>
+                        @endforeach
                     </div>
                 </div>
             </div>

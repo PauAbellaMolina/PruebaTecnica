@@ -15,25 +15,43 @@ class ProductSeeder extends Seeder
             'codigo_producto'=>Str::random(5),
             'nombre'=>'MacBook Pro',
             'descripcion'=>'Portátil Apple MacBook Pro 2018 15".',
-            'url_foto'=>'www.test-url.com',
+            'url_foto'=>'https://picsum.photos/id/0/5616/3744',
             'created_at'=>date('Y-m-d H:m:s'),
             'updated_at'=>date('Y-m-d H:m:s')
         ]);
 
         DB::table('products')->insert([
             'codigo_producto'=>Str::random(5),
-            'nombre'=>'iPhone 11 Max',
-            'descripcion'=>'Smartphone Apple iPhone Max 2020 256GB.',
-            'url_foto'=>'www.test-url.com',
+            'nombre'=>'Kindle',
+            'descripcion'=>'Libro electrónico con retroiluminación Amazon Kindle.',
+            'url_foto'=>'https://picsum.photos/id/367/4928/3264',
             'created_at'=>date('Y-m-d H:m:s'),
             'updated_at'=>date('Y-m-d H:m:s')
         ]);
 
         DB::table('products')->insert([
             'codigo_producto'=>Str::random(5),
-            'nombre'=>'GoPro Hero 9 BE',
-            'descripcion'=>'Cámara de acción GoPro Hero 9 Black Edition.',
-            'url_foto'=>'www.test-url.com',
+            'nombre'=>'iPad Air',
+            'descripcion'=>'Apple iPad Air versión iOS14 con un chip A13.',
+            'url_foto'=>'https://i.picsum.photos/id/668/4133/2745.jpg?hmac=n2-nIVXnrSE_pCjAmI-nlhBicoySz1xq-KUFMr9ERrM',
+            'created_at'=>date('Y-m-d H:m:s'),
+            'updated_at'=>date('Y-m-d H:m:s')
+        ]);
+
+        DB::table('products')->insert([
+            'codigo_producto'=>Str::random(5),
+            'nombre'=>'iPhone SE',
+            'descripcion'=>'Apple iPhone SE 2020 iOS14',
+            'url_foto'=>'https://i.picsum.photos/id/816/5760/3840.jpg?hmac=GGGDK83mK-OK5SsyNiB45tGIw09LTRaz41c-lmyltDs',
+            'created_at'=>date('Y-m-d H:m:s'),
+            'updated_at'=>date('Y-m-d H:m:s')
+        ]);
+
+        DB::table('products')->insert([
+            'codigo_producto'=>Str::random(5),
+            'nombre'=>'Samsung Watch Active 3',
+            'descripcion'=>'Reloj inteligente Samsung Watch serie Active 3.',
+            'url_foto'=>'https://i.picsum.photos/id/4/5616/3744.jpg?hmac=8wIoVTScZoSiagRtRYlNfcd7dYHEf9tGyyEF44ihYFI',
             'created_at'=>date('Y-m-d H:m:s'),
             'updated_at'=>date('Y-m-d H:m:s')
         ]);

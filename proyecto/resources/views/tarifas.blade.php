@@ -5,9 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             @if(@isset (request()->route()->parameters()['id_prod']))
-                <h1 class="coloured"><strong>Tarifas del producto con ID {{request()->route()->parameters()['id_prod']}}</strong></h1>
+                <h1 class="title">Tarifas del producto con ID {{request()->route()->parameters()['id_prod']}}</h1>
             @else
-                <h1 class="coloured"><strong>Todas las tarifas</strong></h1>
+                <h1 class="title">Todas las tarifas</h1>
             @endif
             <hr/>
             <div class="container">

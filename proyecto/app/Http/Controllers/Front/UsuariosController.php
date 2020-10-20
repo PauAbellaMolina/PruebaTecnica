@@ -63,6 +63,15 @@ class UsuariosController extends Controller
         return redirect()->route('usuarios');
     }
 
+    //Details page
+    public function detailsUsuario($id_user)
+    {
+        $apiToken = Auth::user()->api_token;
+        $response = Http::withToken($apiToken)->get('http://proyecto.test/api/get-users/'.$id_user)['users'];
+
+        return view('details-usuario', compact('response'));
+    }
+
     //Edit user
     public function editUsuario($id_user)
     {

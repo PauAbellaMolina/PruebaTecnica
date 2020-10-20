@@ -2007,6 +2007,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     product: String
@@ -2082,6 +2088,14 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -38546,14 +38560,8 @@ var render = function() {
         _vm._v(" "),
         _c("span"),
         _vm._v(" "),
-        _c("p", { staticClass: "col-md-3" }, [
+        _c("p", { staticClass: "col-md-4" }, [
           _vm._v(_vm._s(_vm.product.descripcion))
-        ]),
-        _vm._v(" "),
-        _c("span"),
-        _vm._v(" "),
-        _c("p", { staticClass: "col-md-2" }, [
-          _vm._v(_vm._s(_vm.product.url_foto))
         ]),
         _vm._v(" "),
         _c("span"),
@@ -38591,97 +38599,20 @@ var render = function() {
             _c(
               "div",
               {
-                staticClass:
-                  "col-md-12 d-flex flex-row justify-content-between ml-2"
+                staticClass: "col-md-12 d-flex flex-row justify-content-center"
               },
               [
-                _c("p", { staticClass: "ml-1" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "customLink",
-                      attrs: {
-                        title: "Editar",
-                        href: "/productos/edit/" + _vm.product.id
-                      }
-                    },
-                    [
-                      _c(
-                        "svg",
-                        {
-                          staticClass: "bi bi-pencil-square",
-                          attrs: {
-                            width: "1em",
-                            height: "1em",
-                            viewBox: "0 0 16 16",
-                            fill: "currentColor",
-                            xmlns: "http://www.w3.org/2000/svg"
-                          }
-                        },
-                        [
-                          _c("path", {
-                            attrs: {
-                              d:
-                                "M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("path", {
-                            attrs: {
-                              "fill-rule": "evenodd",
-                              d:
-                                "M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"
-                            }
-                          })
-                        ]
-                      )
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "mr-1" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "customLink borrar",
-                      attrs: {
-                        title: "Borrar",
-                        href: "/productos/delete/" + _vm.product.id
-                      }
-                    },
-                    [
-                      _c(
-                        "svg",
-                        {
-                          staticClass: "bi bi-trash",
-                          attrs: {
-                            width: "1em",
-                            height: "1em",
-                            viewBox: "0 0 16 16",
-                            fill: "currentColor",
-                            xmlns: "http://www.w3.org/2000/svg"
-                          }
-                        },
-                        [
-                          _c("path", {
-                            attrs: {
-                              d:
-                                "M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("path", {
-                            attrs: {
-                              "fill-rule": "evenodd",
-                              d:
-                                "M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"
-                            }
-                          })
-                        ]
-                      )
-                    ]
-                  )
-                ])
+                _c(
+                  "a",
+                  {
+                    staticClass: "customLink",
+                    attrs: {
+                      title: "Categorias del producto",
+                      href: "/productos/details/" + _vm.product.id
+                    }
+                  },
+                  [_vm._v("Detalles")]
+                )
               ]
             ),
             _vm._v(" "),
@@ -38689,7 +38620,7 @@ var render = function() {
               "div",
               {
                 staticClass:
-                  "col-md-12 d-flex flex-row justify-content-center ml-2 p-0 mt-1"
+                  "col-md-12 d-flex flex-row justify-content-center mt-1"
               },
               [
                 _c(
@@ -38705,6 +38636,104 @@ var render = function() {
                 )
               ]
             )
+          ]
+        ),
+        _vm._v(" "),
+        _c("span"),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "col-md-1 d-flex flex-row justify-content-between ml-2"
+          },
+          [
+            _c("p", { staticClass: "ml-1" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "customLink",
+                  attrs: {
+                    title: "Editar",
+                    href: "/productos/edit/" + _vm.product.id
+                  }
+                },
+                [
+                  _c(
+                    "svg",
+                    {
+                      staticClass: "bi bi-pencil-square",
+                      attrs: {
+                        width: "1em",
+                        height: "1em",
+                        viewBox: "0 0 16 16",
+                        fill: "currentColor",
+                        xmlns: "http://www.w3.org/2000/svg"
+                      }
+                    },
+                    [
+                      _c("path", {
+                        attrs: {
+                          d:
+                            "M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("path", {
+                        attrs: {
+                          "fill-rule": "evenodd",
+                          d:
+                            "M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"
+                        }
+                      })
+                    ]
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _c(
+                "a",
+                {
+                  staticClass: "customLink borrar",
+                  attrs: {
+                    title: "Borrar",
+                    href: "/productos/delete/" + _vm.product.id
+                  }
+                },
+                [
+                  _c(
+                    "svg",
+                    {
+                      staticClass: "bi bi-trash",
+                      attrs: {
+                        width: "1em",
+                        height: "1em",
+                        viewBox: "0 0 16 16",
+                        fill: "currentColor",
+                        xmlns: "http://www.w3.org/2000/svg"
+                      }
+                    },
+                    [
+                      _c("path", {
+                        attrs: {
+                          d:
+                            "M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("path", {
+                        attrs: {
+                          "fill-rule": "evenodd",
+                          d:
+                            "M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"
+                        }
+                      })
+                    ]
+                  )
+                ]
+              )
+            ])
           ]
         )
       ]
@@ -38921,7 +38950,52 @@ var render = function() {
         _c("span"),
         _vm._v(" "),
         _c("div", { staticClass: "w-100 d-flex justify-content-between" }, [
-          _c("p", { staticClass: "ml-5" }, [
+          _c("p", { staticClass: "ml-4" }, [
+            _c(
+              "a",
+              {
+                staticClass: "customLink",
+                attrs: {
+                  title: "Detalles",
+                  href: "/usuarios/details/" + _vm.user.id
+                }
+              },
+              [
+                _c(
+                  "svg",
+                  {
+                    staticClass: "bi bi-eye",
+                    attrs: {
+                      width: "1em",
+                      height: "1em",
+                      viewBox: "0 0 16 16",
+                      fill: "currentColor",
+                      xmlns: "http://www.w3.org/2000/svg"
+                    }
+                  },
+                  [
+                    _c("path", {
+                      attrs: {
+                        "fill-rule": "evenodd",
+                        d:
+                          "M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 0 0 1.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0 0 14.828 8a13.133 13.133 0 0 0-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 0 0 1.172 8z"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("path", {
+                      attrs: {
+                        "fill-rule": "evenodd",
+                        d:
+                          "M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                      }
+                    })
+                  ]
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", [
             _c(
               "a",
               {
@@ -38965,7 +39039,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _c("p", { staticClass: "mr-4" }, [
+          _c("p", { staticClass: "ml-1" }, [
             _c(
               "a",
               {

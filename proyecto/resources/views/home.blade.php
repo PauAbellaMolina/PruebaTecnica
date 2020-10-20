@@ -4,7 +4,7 @@
 <div class="container py-4 text-start">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <h1 class="coloured"><strong>Bienvenido!</strong></h1>
+            <h1 class="title">Bienvenido!</h1>
             <hr/>
             <div class="d-flex flex-row">
                 <img class="imgPerfil" src="{{ $userInfo[4] }}" />

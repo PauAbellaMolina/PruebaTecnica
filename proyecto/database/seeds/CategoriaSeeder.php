@@ -34,5 +34,61 @@ class CategoriaSeeder extends Seeder
             'created_at'=>date('Y-m-d H:m:s'),
             'updated_at'=>date('Y-m-d H:m:s')
         ]);
+
+        DB::table('categorias')->insert([
+            'codigo_categoria'=>Str::random(5),
+            'nombre'=>'liquidación',
+            'descripcion'=>'Productos en liquidación.',
+            'created_at'=>date('Y-m-d H:m:s'),
+            'updated_at'=>date('Y-m-d H:m:s')
+        ]);
+
+        DB::table('categorias')->insert([
+            'codigo_categoria'=>Str::random(5),
+            'nombre'=>'oferta flash',
+            'descripcion'=>'Productos en oferta flash.',
+            'created_at'=>date('Y-m-d H:m:s'),
+            'updated_at'=>date('Y-m-d H:m:s')
+        ]);
+
+        DB::table('categorias')->insert([
+            'codigo_categoria'=>Str::random(5),
+            'nombre'=>'stock bajo',
+            'descripcion'=>'Productos con stock bajo.',
+            'created_at'=>date('Y-m-d H:m:s'),
+            'updated_at'=>date('Y-m-d H:m:s')
+        ]);
+
+        DB::table('categorias')->insert([
+            'codigo_categoria'=>Str::random(5),
+            'nombre'=>'black friday',
+            'descripcion'=>'Productos para el black friday.',
+            'created_at'=>date('Y-m-d H:m:s'),
+            'updated_at'=>date('Y-m-d H:m:s')
+        ]);
+
+        DB::table('categorias')->insert([
+            'codigo_categoria'=>Str::random(5),
+            'nombre'=>'cybermonday',
+            'descripcion'=>'Productos para el cybermonday.',
+            'created_at'=>date('Y-m-d H:m:s'),
+            'updated_at'=>date('Y-m-d H:m:s')
+        ]);
+
+        DB::table('categorias')->insert([
+            'codigo_categoria'=>Str::random(5),
+            'nombre'=>'muestra',
+            'descripcion'=>'Productos de muestra.',
+            'created_at'=>date('Y-m-d H:m:s'),
+            'updated_at'=>date('Y-m-d H:m:s')
+        ]);
+
+        DB::table('categorias')->insert([
+            'codigo_categoria'=>Str::random(5),
+            'nombre'=>'reacondicionado',
+            'descripcion'=>'Productos reacondicionados.',
+            'created_at'=>date('Y-m-d H:m:s'),
+            'updated_at'=>date('Y-m-d H:m:s')
+        ]);
     }
 }

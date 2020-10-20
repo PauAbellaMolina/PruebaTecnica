@@ -66,6 +66,26 @@ class ProductosController extends Controller
         return view('products', compact('response'));
     }
 
+    //Details page
+    public function detailsProducto($id_prod)
+    {
+        $apiToken = Auth::user()->api_token;
+        $responseProd = Http::withToken($apiToken)->get('http://proyecto.test/api/get-prods/'.$id_prod)['products'];
+
+        $responseRelation = Http::withToken($apiToken)->get('http://proyecto.test/api/get-categs-prods/prods/'.$id_prod)['relations by id_prod'];
+        $response = [];
+
+        foreach($responseRelation as $rr) {
+            $responseCategs = Http::withToken($apiToken)->get('http://proyecto.test/api/get-categs/'.$rr['id_categ'])['categorias'];
+            $responseCategs['id_prod'] = $rr['id_prod'];
+            array_push($response, $responseCategs);
+        }
+
+        array_push($responseProd, $response);
+
+        return view('details-producto', compact('responseProd'));
+    }
+
     //New producto
     public function nuevoProducto()
     {
@@ -80,7 +100,7 @@ class ProductosController extends Controller
         return redirect()->route('productos');
     }
 
-    //Edit user
+    //Edit product
     public function editProducto($id_prod)
     {
         $apiToken = Auth::user()->api_token;

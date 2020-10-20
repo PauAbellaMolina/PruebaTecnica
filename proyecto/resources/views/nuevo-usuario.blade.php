@@ -4,7 +4,7 @@
 <div id="usuarios" class="container py-4 text-start">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <h1 class="coloured"><strong>Nuevo Usuario</strong></h1>
+            <h1 class="title">Nuevo Usuario</h1>
             <hr/>
             <div class="container">
                 <div class="d-flex justify-content-between align-items-end">
@@ -12,7 +12,7 @@
                         <h3>Introduce los datos del nuevo usuario:</h3>
                         <form method="POST" action="{{route('usuarios/nuevo/post')}}">
                             {{ csrf_field() }}
-                            <div class="d-flex flex-column">
+                            <div class="editForm d-flex flex-column">
                                 <div>
                                     <label class="customLabel" for="nombre">Nombre:</label>
                                     <input class="customInput" type="text" name="nombre" id="nombre" value="" required placeholder="Introduce el nombre" />
