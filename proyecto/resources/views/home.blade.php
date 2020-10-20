@@ -6,9 +6,14 @@
         <div class="col-md-12">
             <h1 class="coloured"><strong>Bienvenido!</strong></h1>
             <hr/>
-            <h2>{{ $userInfo[1] }} {{ $userInfo[2] }}</h2>
-            <h4 class="mb-4">{{ $userInfo[3] }}</h4>
-            <h5><a class="coloured customLink" href="{{route('usuarios/edit', ['id_user' => $userInfo[0]])}}">Editar mi información</a></h5>
+            <div class="d-flex flex-row">
+                <img class="imgPerfil" src="{{ $userInfo[4] }}" />
+                <div class="d-flex flex-column mt-3 ml-4">
+                    <h2 title="¡Mira mamá, soy yo!">{{ $userInfo[1] }} {{ $userInfo[2] }}</h2>
+                    <h4 class="mb-4">{{ $userInfo[3] }}</h4>
+                    <h5><a class="coloured customLink" href="{{route('usuarios/edit', ['id_user' => $userInfo[0]])}}">Editar mi información</a></h5>
+                </div>
+            </div>
         </div>
     </div>
 </div>

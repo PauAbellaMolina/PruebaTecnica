@@ -60,6 +60,19 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+::selection {
+    color: #393e46;
+    background-color: #edc988;
+}
+
+.logo {
+    text-shadow: .1em .1em 0 #ea5455;
+}
+
+.logo:hover {
+    text-shadow: .15em .15em 0 #ea5455;
+}
+
 .coloured {
     color: #edc988 !important;
 }
@@ -4495,6 +4508,10 @@ input[type=button].btn-block {
   margin-bottom: -1px;
 }
 
+.nav-item a{
+    font-size: 20px;
+}
+
 .nav-tabs .nav-link {
   border: 1px solid transparent;
   border-top-left-radius: 0.25rem;
@@ -4583,7 +4600,7 @@ input[type=button].btn-block {
   padding-top: 0.32rem;
   padding-bottom: 0.32rem;
   margin-right: 1rem;
-  font-size: 1.125rem;
+  font-size: 1.8rem !important;
   line-height: inherit;
   white-space: nowrap;
   color: #edc988 !important;

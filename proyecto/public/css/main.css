@@ -7,6 +7,16 @@
     min-width: 210px;
 }
 
+/* HOME */
+.imgPerfil {
+    width: 250px;
+    border-radius: 30px;
+}
+.imgPerfil:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 0 #ea5455;
+}
+
 /* USUARIOS */
 #usuarios {
     color: #eeeeee;

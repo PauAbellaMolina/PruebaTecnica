@@ -1,5 +1,6 @@
 #sideMenu {
-    font-family: 'Rubik', sans-serif !important;
+    font-family: 'Rubik Mono One', sans-serif !important;
+    font-size: 15px;
     border-right: 1px solid #272b31;
     min-height: 93vh;
     width: 20%;
@@ -19,6 +20,10 @@
         #sideMenu div a:hover {
             font-style: italic;
             text-decoration: none;
+        }
+        .activeSideMenu {
+            color: #edc988 !important;
+            font-style: italic;
         }
 
 .logOutButton {
