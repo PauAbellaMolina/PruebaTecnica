@@ -41,13 +41,6 @@ class HomeController extends Controller
             $userFoto
         ];
 
-        /* $secureUserApiToken = Crypt::encryptString(Auth::user()->api_token); //Crypt::decryptString(session('api_token') to decrypt the api token)
-        $testingInsecureUserApiToken = Auth::user()->api_token;
-        session(['api_token'=>$secureUserApiToken]);
-        session(['nombre'=>$userNombre]);
-        session(['apellidos'=>$userApellidos]);
-        session(['email'=>$userEmail]); */
-
         return view('home', compact('userInfo'));
     }
 }
